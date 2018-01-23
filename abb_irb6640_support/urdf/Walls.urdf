@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<robot name="wall">
+  <link name="world"/>
+  <link name="T1">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="4.8768 0.05 2.0"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="4.8768 0.05 2.0"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+  <link name="T2">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="4.8768 0.05 2.0"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="4.8768 0.05 2.0"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+  <link name="T3">
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.05 6.4262 2.0"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.05 6.4262 2.0"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+  <link name="Ceiling">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/TestBed_scene5.STL"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/TestBed_scene5.STL"/>
+      </geometry>
+      <material name="DarkGrey"/>
+    </visual>
+  </link>
+
+  <joint name="T1_joint" type="fixed">
+    <parent link="world"/>
+    <child link="T1"/>
+    <origin rpy="0 0 0" xyz="1.5384 -3.8262 1"/>
+  </joint>
+  <joint name="T2_joint" type="fixed">
+    <parent link="world"/>
+    <child link="T2"/>
+    <origin rpy="0 0 0" xyz="1.5384 2.6 1"/>
+  </joint>
+  <joint name="T3_joint" type="fixed">
+    <parent link="world"/>
+    <child link="T3"/>
+    <origin rpy="0 0 0" xyz="-0.9 -0.6131 1"/>
+  </joint>
+   <joint name="Ceiling_joint" type="fixed">
+    <parent link="world"/>
+    <child link="Ceiling"/>
+    <origin rpy="1.570796 0 3.1415926" xyz="-0.9 -4.377 0"/> 
+  </joint>
+
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+</robot>

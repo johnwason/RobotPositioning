@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<robot name="wall">
+  <link name="world"/>
+  <link name="T1">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T1.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T1.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+  <link name="T2">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T1.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T1.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+  <link name="T3">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T3.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T3.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+  <link name="T4">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T3.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/T3.stl" scale="0.5 0.5 0.5"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="T1_joint" type="fixed">
+    <parent link="world"/>
+    <child link="T1"/>
+    <origin rpy="0 0 0" xyz="1.5384 -3.8262 1"/>
+  </joint>
+  <joint name="T2_joint" type="fixed">
+    <parent link="world"/>
+    <child link="T2"/>
+    <origin rpy="0 0 0" xyz="1.5384 2.6 1"/>
+  </joint>
+  <joint name="T3_joint" type="fixed">
+    <parent link="world"/>
+    <child link="T3"/>
+    <origin rpy="0 0 0" xyz="-0.75 -0.6131 1"/>
+  </joint>
+  <joint name="T4_joint" type="fixed">
+    <parent link="world"/>
+    <child link="T4"/>
+    <origin rpy="0 0 0" xyz="3.8268 -0.6131 1"/>
+  </joint>
+
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+</robot>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<robot name="wall">
+  <link name="world"/>
+  <link name="Ceiling">
+    <collision name="collision">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/TestBed_scene5.STL"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://abb_irb6640_support/meshes/Scene/TestBed_scene5.STL"/>
+      </geometry>
+      <material name="DarkGrey">
+        <color rgba="0.7 0.7 0.7 0.5"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="Ceiling_joint" type="fixed">
+    <parent link="world"/>
+    <child link="Ceiling"/>
+    <origin rpy="1.570796 0 3.1415926" xyz="-0.9 -4.377 0"/> 
+  </joint>
+
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+</robot>

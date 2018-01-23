@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <node pkg="gazebo_ros" name="spawn_irb6640" type="spawn_model"
+   args="-model irb6640 -urdf -file $(find abb_irb6640_support)/urdf/irb6640_185_280_dynamics.urdf" />
+</launch>

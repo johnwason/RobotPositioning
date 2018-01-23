@@ -1,2 +1,2 @@
-# RobotPositioning
-Positioning of the Robot using OpenRAVE
+# RobotPosiotioning
+Robot Positioning in Testbed with OpenRAVE
